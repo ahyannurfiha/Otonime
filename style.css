@@ -1,0 +1,478 @@
+/** global element styling **/
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap");
+
+body {
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.bg {
+    background-image: url('https://img5.goodfon.com/wallpaper/nbig/e/ba/one-piece-paren-belyi-fon-shliapa.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+/* navigation styling */
+nav {
+    font-weight: 400;
+}
+
+@media (max-width: 650px) {
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    nav li {
+        padding-bottom: 5px;
+    }
+
+
+}
+
+#nav-bar a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 300px;
+}
+
+#nav-bar a.active {
+    background-color: #ffffff;
+    color: white;
+}
+
+nav>ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+
+@media (max-width: 650px) {
+    nav>ul {
+        flex-direction: column;
+    }
+}
+
+
+#email {
+    height: 2.3rem;
+    width: 18rem;
+    border-radius: 1rem;
+}
+
+/* FAQ'S */
+.faq-heading {
+    border-bottom: #777;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hr-line {
+    width: 60%;
+    margin: auto;
+
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+
+.faq-body {
+    margin: auto;
+    /* text-align: center; */
+    width: 50%;
+    padding: auto;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+#page-wrapper {
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/** global classes styling **/
+
+.btn {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px black solid;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 35px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+
+@media (max-width: 650px) {
+    .logo {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.logo>img {
+    width: 70px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+    .logo>img {
+        margin: 0 auto;
+    }
+}
+
+
+/*** HERO SECTION ****/
+
+#hero {
+    justify-content: space-evenly;
+    padding: 8rem 4rem;
+}
+
+#hero h2 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 4rem;
+    max-width: 30rem;
+    width: 100%;
+    font-weight: 900;
+
+}
+
+#hero p {
+    font-weight: 500;
+}
+
+.f-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.f-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+.btn {
+    border: none;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 5rem;
+    margin: 2rem 0;
+    font: inherit;
+    font-size: 1.4rem;
+    width: 25rem;
+    font-weight: 500;
+}
+
+.btn {
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    background: #05bc55;
+    width: 12rem;
+    transition: all .2s;
+    border-radius: 50px;
+    background: $activeBlue;
+    color: $white;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+
+}
+
+.btn:hover {
+    box-shadow: 0 0 1.5rem #05bc55;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .25);
+}
+
+.btn:active {
+    box-shadow: none;
+}
+
+/*** FEATURES SECTION ****/
+
+#services {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 4rem;
+
+}
+
+#vidio-anime {
+    text-align: center;
+    padding: 0;
+    margin-top: auto;
+}
+
+.services-card {
+    width: 28rem;
+    background: #a8dadc;
+    padding: 2.5rem;
+    border-radius: 3rem;
+    gap: 2rem;
+    margin: 2rem;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+}
+
+.c-2 {
+    background: #e5e5e5;
+}
+
+.c-3 {
+    background: #f2cc8f;
+}
+
+.desc p {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .75);
+    padding: 1rem 0;
+}
+
+/* #faq {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+} */
+
+#pricing {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(65% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+.product::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+
+.product:hover {
+    transform: translateY(-40px);
+    transition: transform 1s;
+}
+
+.product:hover::after {
+    transform: translate(-50%, 40px) scale(0.75);
+    transition: transform 1s;
+}
+
+.product>.level1 {
+    background-color: #a8dadc;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product>.level2 {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product>.level3 {
+    background-color: #f2cc8f;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product>h2 {
+    margin-top: 15px;
+}
+
+.product>ol {
+    margin: 15px 0;
+    padding-right: 35px;
+}
+
+.product>ol>li {
+    padding: 4px 0px;
+}
+
+.product>button {
+    border: 0;
+    margin: 15px 0;
+    background-color: #05bc55;
+    font-weight: 400;
+}
+
+.product>button:hover {
+    background-color: #05bc55;
+    transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+    #pricing {
+        flex-direction: column;
+    }
+
+    .product {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Footer */
+
+footer {
+    margin-top: 100px;
+    background-color: #ddd;
+    text-align: center;
+    font-size: 16px;
+    grid-area: footer;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+footer a:hover {
+    color: var(--pink);
+}
+
+footer .icon {
+    margin: 0.3em;
+    font-size: 2em;
+}
+
+footer img {
+    max-width: 30%;
+}
+
+@media (max-width: 700px) {
+    footer img {
+        max-width: 70%;
+    }
+}
+
+/* End Footer */
